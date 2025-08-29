@@ -3,10 +3,10 @@ from utils.db import db
 from utils.auth import hash_password, verify_password, create_token
 from models.user import User
 
-auth_routes = Blueprint("auth_routes", __name__)
+auth_bp = Blueprint("auth", __name__)
 
 # Register
-@auth_routes.route("/register", methods=["POST"])
+@auth_bp.route("/register", methods=["POST"])
 def register():
     data = request.json
     username = data.get("username")
@@ -30,7 +30,7 @@ def register():
     return jsonify({"message": "User registered successfully"}), 201
 
 # Login
-@auth_routes.route("/login", methods=["POST"])
+@auth_bp.route("/login", methods=["POST"])
 def login():
     data = request.json
     email = data.get("email")
