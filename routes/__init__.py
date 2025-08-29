@@ -1,1 +1,1 @@
-from .auth_routes import auth_routes
+# Make routes a package
