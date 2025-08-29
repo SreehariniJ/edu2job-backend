@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard">
+  <h2>Welcome to Edu2Job</h2>
+  <p>You have successfully logged in 🎉</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Profile</h3>
+      <p>View and edit your details.</p>
+    </div>
+    <div class="card">
+      <h3>Predictions</h3>
+      <p>Explore your job role predictions.</p>
+    </div>
+    <div class="card">
+      <h3>Logout</h3>
+      <p><a href="{{ url_for('auth.login') }}">Sign out</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
